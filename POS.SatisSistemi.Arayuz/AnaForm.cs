@@ -236,10 +236,13 @@ namespace POS.SatisSistemi.Arayuz
         }
 
         #endregion
+        // Satış tarixçəsi formunu açır
+        private void btnSatışTarixçəsi_Click(object sender, EventArgs e)
+        {
+            using (var tarixçəFormu = new SatışTarixçəsiForm())
+            {
+                tarixçəFormu.ShowDialog();
+            }
+        }
     }
 }
-
-// Qeyd: AnaForm.Designer.cs faylını Visual Studio avtomatik yaradacaq.
-// Manual olaraq ödəniş düymələrinin Click hadisəsini eyni metoda (btnÖdəniş_Click)
-// və dil düymələrini də eyni metoda (btnDil_Click) bağlayın.
-// Hər düymənin Tag xüsusiyyətinə müvafiq dəyəri yazın (məs. btnNəğd üçün "Nəğd", btnDilAz üçün "az").

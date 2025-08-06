@@ -35,5 +35,11 @@ namespace POS.SatisSistemi.IsMantigi
             satışlar.Add(yeniSatış);
             _satışAmbari.HamısınıYaz(satışlar);
         }
+        // Bütün qeydə alınmış satışların siyahısını qaytarır
+        public List<Satış> HamısınıGetir()
+        {
+            // Satışları tarixinə görə azalan sıra ilə qaytarır (ən son satışlar yuxarıda)
+            return _satışAmbari.HamısınıGetir().OrderByDescending(s => s.Tarix).ToList();
+        }
     }
 }

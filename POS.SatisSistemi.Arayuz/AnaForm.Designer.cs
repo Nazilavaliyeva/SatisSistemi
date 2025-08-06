@@ -38,6 +38,7 @@
             this.lblÜmumiYekun = new System.Windows.Forms.Label();
             this.lblÜmumiYekunBaşlıq = new System.Windows.Forms.Label();
             this.pnlÜst = new System.Windows.Forms.Panel();
+            this.btnSatışTarixçəsi = new System.Windows.Forms.Button();
             this.btnAnbar = new System.Windows.Forms.Button();
             this.btnDilEn = new System.Windows.Forms.Button();
             this.btnDilAz = new System.Windows.Forms.Button();
@@ -151,6 +152,7 @@
             // pnlÜst
             // 
             this.pnlÜst.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlÜst.Controls.Add(this.btnSatışTarixçəsi);
             this.pnlÜst.Controls.Add(this.btnAnbar);
             this.pnlÜst.Controls.Add(this.btnDilEn);
             this.pnlÜst.Controls.Add(this.btnDilAz);
@@ -160,6 +162,18 @@
             this.pnlÜst.Name = "pnlÜst";
             this.pnlÜst.Size = new System.Drawing.Size(984, 60);
             this.pnlÜst.TabIndex = 1;
+            // 
+            // btnSatışTarixçəsi
+            // 
+            this.btnSatışTarixçəsi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSatışTarixçəsi.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnSatışTarixçəsi.Location = new System.Drawing.Point(620, 14);
+            this.btnSatışTarixçəsi.Name = "btnSatışTarixçəsi";
+            this.btnSatışTarixçəsi.Size = new System.Drawing.Size(127, 34);
+            this.btnSatışTarixçəsi.TabIndex = 4;
+            this.btnSatışTarixçəsi.Text = "Satış Tarixçəsi";
+            this.btnSatışTarixçəsi.UseVisualStyleBackColor = true;
+            this.btnSatışTarixçəsi.Click += new System.EventHandler(this.btnSatışTarixçəsi_Click);
             // 
             // btnAnbar
             // 
@@ -205,7 +219,7 @@
             this.txtAxtarış.Font = new System.Drawing.Font("Segoe UI", 15.75F);
             this.txtAxtarış.Location = new System.Drawing.Point(12, 12);
             this.txtAxtarış.Name = "txtAxtarış";
-            this.txtAxtarış.Size = new System.Drawing.Size(730, 35);
+            this.txtAxtarış.Size = new System.Drawing.Size(602, 35);
             this.txtAxtarış.TabIndex = 0;
             this.txtAxtarış.Tag = "Axtar";
             this.txtAxtarış.TextChanged += new System.EventHandler(this.txtAxtarış_TextChanged);
@@ -253,7 +267,7 @@
             this.lbAxtarışNəticələri.ItemHeight = 21;
             this.lbAxtarışNəticələri.Location = new System.Drawing.Point(12, 66);
             this.lbAxtarışNəticələri.Name = "lbAxtarışNəticələri";
-            this.lbAxtarışNəticələri.Size = new System.Drawing.Size(730, 151);
+            this.lbAxtarışNəticələri.Size = new System.Drawing.Size(602, 151);
             this.lbAxtarışNəticələri.TabIndex = 3;
             this.lbAxtarışNəticələri.Visible = false;
             this.lbAxtarışNəticələri.DoubleClick += new System.EventHandler(this.lbAxtarışNəticələri_DoubleClick);
@@ -298,5 +312,6 @@
         private System.Windows.Forms.Button btnDilEn;
         private System.Windows.Forms.Button btnDilAz;
         private System.Windows.Forms.ListBox lbAxtarışNəticələri;
+        private System.Windows.Forms.Button btnSatışTarixçəsi;
     }
 }
