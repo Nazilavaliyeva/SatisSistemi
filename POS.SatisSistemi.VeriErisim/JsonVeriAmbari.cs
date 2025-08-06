@@ -36,11 +36,12 @@ namespace POS.SatisSistemi.VeriErisim
         }
 
         // Məlumatların tam siyahısını fayla yazır
+        // Məlumatların tam siyahısını fayla yazır
         public void HamısınıYaz(List<T> məlumatlar)
         {
             // Obyektlərin siyahısını formatlı (oxunaqlı) JSON mətninə çevirir
             var jsonOptions = new JsonSerializerOptions { WriteIndented = true };
-            string json = JsonSerializer.Serialize(məhsullar, jsonOptions);
+            string json = JsonSerializer.Serialize(məlumatlar, jsonOptions); // <--- DÜZƏLİŞ
 
             // JSON mətnini fayla yazır
             File.WriteAllText(_faylYolu, json);
