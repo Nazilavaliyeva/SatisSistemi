@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\POS.SatisSistemi.Modeller\POS.SatisSistemi.Modeller.csproj" />
+    <ProjectReference Include="..\POS.SatisSistemi.VeriErisim\POS.SatisSistemi.VeriErisim.csproj" />
+  </ItemGroup>
+
 </Project>
