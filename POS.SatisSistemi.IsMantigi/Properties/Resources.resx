@@ -126,13 +126,76 @@
   <data name="AnbarFormBasliq" xml:space="preserve">
     <value>Inventory Management</value>
   </data>
+  <data name="Artikul" xml:space="preserve">
+    <value>SKU</value>
+  </data>
   <data name="Axtar" xml:space="preserve">
     <value>Search by Code/Barcode...</value>
+  </data>
+  <data name="Barkod" xml:space="preserve">
+    <value>Barcode</value>
+  </data>
+  <data name="Cəm" xml:space="preserve">
+    <value> Total</value>
+  </data>
+  <data name="Kartla" xml:space="preserve">
+    <value>Card</value>
+  </data>
+  <data name="Köçürmə" xml:space="preserve">
+    <value>Transfer</value>
+  </data>
+  <data name="LəğvEt" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Miqdar" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+  <data name="MövcudMiqdar" xml:space="preserve">
+    <value>Stock Quantity</value>
   </data>
   <data name="MəhsulAdı" xml:space="preserve">
     <value> Product Name</value>
   </data>
-  <data name="MəhsulRedakteFormBasliq" xml:space="preserve">
+  <data name="i" xml:space="preserve">
     <value>Add/Edit Product</value>
+  </data>
+  <data name="Məlumat" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="MəlumatlarYüklənir" xml:space="preserve">
+    <value>Loading data...</value>
+  </data>
+  <data name="Nisyə" xml:space="preserve">
+    <value>Credit</value>
+  </data>
+  <data name="Nəğd" xml:space="preserve">
+    <value>Cash</value>
+  </data>
+  <data name="Qiymət" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="SatışUğurluOldu" xml:space="preserve">
+    <value>Sale completed successfully!</value>
+  </data>
+  <data name="SatışıTamamla" xml:space="preserve">
+    <value>Complete Sale</value>
+  </data>
+  <data name="SilməkİstədiyinizəƏminsiniz" xml:space="preserve">
+    <value>Are you sure you want to delete?</value>
+  </data>
+  <data name="Xəbərdarlıq" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="YaddaSaxla" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="YeniMəhsul" xml:space="preserve">
+    <value>New Product</value>
+  </data>
+  <data name="ZəhmətOlmasaMəhsulSeçin" xml:space="preserve">
+    <value>Please add products to the cart.</value>
+  </data>
+  <data name="ÜmumiYekun" xml:space="preserve">
+    <value>GRAND TOTAL:</value>
   </data>
 </root>

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace POS.SatisSistemi.Arayuz {
+namespace POS.SatisSistemi.IsMantigi.Properties {
     using System;
     
     
@@ -22,7 +22,7 @@ namespace POS.SatisSistemi.Arayuz {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,10 +36,10 @@ namespace POS.SatisSistemi.Arayuz {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("POS.SatisSistemi.Arayuz.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("POS.SatisSistemi.IsMantigi.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -51,7 +51,7 @@ namespace POS.SatisSistemi.Arayuz {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace POS.SatisSistemi.Arayuz {
         /// <summary>
         ///   Looks up a localized string similar to POS - Point of Sale.
         /// </summary>
-        internal static string AnaFormBasliq {
+        public static string AnaFormBasliq {
             get {
                 return ResourceManager.GetString("AnaFormBasliq", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace POS.SatisSistemi.Arayuz {
         /// <summary>
         ///   Looks up a localized string similar to Inventory.
         /// </summary>
-        internal static string Anbar {
+        public static string Anbar {
             get {
                 return ResourceManager.GetString("Anbar", resourceCulture);
             }
@@ -81,27 +81,225 @@ namespace POS.SatisSistemi.Arayuz {
         /// <summary>
         ///   Looks up a localized string similar to Inventory Management.
         /// </summary>
-        internal static string AnbarFormBasliq {
+        public static string AnbarFormBasliq {
             get {
                 return ResourceManager.GetString("AnbarFormBasliq", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SKU.
+        /// </summary>
+        public static string Artikul {
+            get {
+                return ResourceManager.GetString("Artikul", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Search by Code/Barcode....
         /// </summary>
-        internal static string Axtar {
+        public static string Axtar {
             get {
                 return ResourceManager.GetString("Axtar", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Barcode.
+        /// </summary>
+        public static string Barkod {
+            get {
+                return ResourceManager.GetString("Barkod", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  Total.
+        /// </summary>
+        public static string Cəm {
+            get {
+                return ResourceManager.GetString("Cəm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Add/Edit Product.
         /// </summary>
-        internal static string MəhsulRedakteFormBasliq {
+        public static string i {
             get {
-                return ResourceManager.GetString("MəhsulRedakteFormBasliq", resourceCulture);
+                return ResourceManager.GetString("i", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Card.
+        /// </summary>
+        public static string Kartla {
+            get {
+                return ResourceManager.GetString("Kartla", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Transfer.
+        /// </summary>
+        public static string Köçürmə {
+            get {
+                return ResourceManager.GetString("Köçürmə", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        public static string LəğvEt {
+            get {
+                return ResourceManager.GetString("LəğvEt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  Product Name.
+        /// </summary>
+        public static string MəhsulAdı {
+            get {
+                return ResourceManager.GetString("MəhsulAdı", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Information.
+        /// </summary>
+        public static string Məlumat {
+            get {
+                return ResourceManager.GetString("Məlumat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loading data....
+        /// </summary>
+        public static string MəlumatlarYüklənir {
+            get {
+                return ResourceManager.GetString("MəlumatlarYüklənir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quantity.
+        /// </summary>
+        public static string Miqdar {
+            get {
+                return ResourceManager.GetString("Miqdar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stock Quantity.
+        /// </summary>
+        public static string MövcudMiqdar {
+            get {
+                return ResourceManager.GetString("MövcudMiqdar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cash.
+        /// </summary>
+        public static string Nəğd {
+            get {
+                return ResourceManager.GetString("Nəğd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Credit.
+        /// </summary>
+        public static string Nisyə {
+            get {
+                return ResourceManager.GetString("Nisyə", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Price.
+        /// </summary>
+        public static string Qiymət {
+            get {
+                return ResourceManager.GetString("Qiymət", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Complete Sale.
+        /// </summary>
+        public static string SatışıTamamla {
+            get {
+                return ResourceManager.GetString("SatışıTamamla", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sale completed successfully!.
+        /// </summary>
+        public static string SatışUğurluOldu {
+            get {
+                return ResourceManager.GetString("SatışUğurluOldu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to delete?.
+        /// </summary>
+        public static string SilməkİstədiyinizəƏminsiniz {
+            get {
+                return ResourceManager.GetString("SilməkİstədiyinizəƏminsiniz", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GRAND TOTAL:.
+        /// </summary>
+        public static string ÜmumiYekun {
+            get {
+                return ResourceManager.GetString("ÜmumiYekun", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Warning.
+        /// </summary>
+        public static string Xəbərdarlıq {
+            get {
+                return ResourceManager.GetString("Xəbərdarlıq", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save.
+        /// </summary>
+        public static string YaddaSaxla {
+            get {
+                return ResourceManager.GetString("YaddaSaxla", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New Product.
+        /// </summary>
+        public static string YeniMəhsul {
+            get {
+                return ResourceManager.GetString("YeniMəhsul", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please add products to the cart..
+        /// </summary>
+        public static string ZəhmətOlmasaMəhsulSeçin {
+            get {
+                return ResourceManager.GetString("ZəhmətOlmasaMəhsulSeçin", resourceCulture);
             }
         }
     }
