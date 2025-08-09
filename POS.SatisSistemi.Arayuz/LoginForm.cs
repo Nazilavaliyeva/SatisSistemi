@@ -25,7 +25,7 @@ namespace POS.SatisSistemi.Arayuz
             }
             else
             {
-                MessageBox.Show("İstifadəçi adı və ya şifrə yanlışdır!", "Xəta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("İstifadəçi adı və ya şifrə yanlışdır!", "Xəta  0", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
