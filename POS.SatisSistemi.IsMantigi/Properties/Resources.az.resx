@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AdSoyad" xml:space="preserve">
+    <value> Ad Soyad</value>
+  </data>
   <data name="AnaFormBasliq" xml:space="preserve">
     <value>POS - Satış Nöqtəsi</value>
   </data>
@@ -133,10 +136,28 @@
     <value>Koda/Barkoda görə axtar...</value>
   </data>
   <data name="Barkod" xml:space="preserve">
-    <value>Barkod</value>
+    <value> Barkod</value>
+  </data>
+  <data name="BərpaMesajı" xml:space="preserve">
+    <value>Bərpa təlimatları {0} ünvanına göndərildi.</value>
+  </data>
+  <data name="BərpaTəlimatı" xml:space="preserve">
+    <value>Qeydiyyatdan keçdiyiniz e-poçt ünvanını daxil edin. Bərpa təlimatları həmin ünvana göndəriləcək.</value>
   </data>
   <data name="Cəm" xml:space="preserve">
     <value>Cəm</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value> E-poçt</value>
+  </data>
+  <data name="GirişEt" xml:space="preserve">
+    <value>GİRİŞ ET</value>
+  </data>
+  <data name="GirişXətası" xml:space="preserve">
+    <value>İstifadəçi adı və ya şifrə yanlışdır!</value>
+  </data>
+  <data name="Göndər" xml:space="preserve">
+    <value>Göndər</value>
   </data>
   <data name="Kartla" xml:space="preserve">
     <value>Kartla</value>
@@ -144,11 +165,14 @@
   <data name="Köçürmə" xml:space="preserve">
     <value>Köçürmə</value>
   </data>
+  <data name="LoginFormBasliq" xml:space="preserve">
+    <value>Sistemə Giriş</value>
+  </data>
   <data name="LəğvEt" xml:space="preserve">
     <value>Ləğv Et</value>
   </data>
   <data name="Miqdar" xml:space="preserve">
-    <value>Miqdar</value>
+    <value> Miqdar</value>
   </data>
   <data name="MövcudMiqdar" xml:space="preserve">
     <value>Mövcud Miqdar</value>
@@ -156,14 +180,11 @@
   <data name="MəhsulAdı" xml:space="preserve">
     <value>Məhsul Adı</value>
   </data>
-  <data name="i" xml:space="preserve">
+  <data name="MəhsulRedakteFormBasliq" xml:space="preserve">
     <value>Məhsul Əlavə Et/Düzəliş Et</value>
   </data>
   <data name="Məlumat" xml:space="preserve">
     <value>Məlumat</value>
-  </data>
-  <data name="MəlumatlarYüklənir" xml:space="preserve">
-    <value>Məlumatlar yüklənir...</value>
   </data>
   <data name="Nisyə" xml:space="preserve">
     <value>Nisyə</value>
@@ -171,23 +192,56 @@
   <data name="Nəğd" xml:space="preserve">
     <value>Nəğd</value>
   </data>
+  <data name="Qeydiyyat" xml:space="preserve">
+    <value>Qeydiyyat</value>
+  </data>
+  <data name="QeydiyyatFormBasliq" xml:space="preserve">
+    <value>Yeni İstifadəçi Qeydiyyatı</value>
+  </data>
+  <data name="QeydiyyatUğurlu" xml:space="preserve">
+    <value>Qeydiyyat uğurla tamamlandı!</value>
+  </data>
   <data name="Qiymət" xml:space="preserve">
-    <value>Qiymət</value>
+    <value> Qiymət</value>
+  </data>
+  <data name="Satış Tarixçəsi" xml:space="preserve">
+    <value>Yadda Saxla</value>
+  </data>
+  <data name="SatışID" xml:space="preserve">
+    <value>Satış ID</value>
+  </data>
+  <data name="SatışTarixçəsi" xml:space="preserve">
+    <value>Satış Tarixçəsi</value>
+  </data>
+  <data name="SatışTarixçəsiFormBasliq" xml:space="preserve">
+    <value>Satış Tarixçəsi</value>
   </data>
   <data name="SatışUğurluOldu" xml:space="preserve">
-    <value> Satış uğurla tamamlandı!</value>
+    <value>Satış uğurla tamamlandı!</value>
   </data>
-  <data name="SatışıTamamla" xml:space="preserve">
-    <value>Satışı Tamamla</value>
+  <data name="SatışınTərkibi" xml:space="preserve">
+    <value>Satışın Tərkibi</value>
+  </data>
+  <data name="SatışƏməliyyatları" xml:space="preserve">
+    <value>Satış Əməliyyatları</value>
   </data>
   <data name="SilməkİstədiyinizəƏminsiniz" xml:space="preserve">
-    <value>Silmək istədiyinizə əminsiniz?</value>
+    <value> Silmək istədiyinizə əminsiniz?</value>
+  </data>
+  <data name="Tarix" xml:space="preserve">
+    <value>Tarix</value>
+  </data>
+  <data name="VahidinQiyməti" xml:space="preserve">
+    <value> Vahidin Qiyməti</value>
+  </data>
+  <data name="XanalarıDoldurun" xml:space="preserve">
+    <value>Bütün xanalar doldurulmalıdır.</value>
   </data>
   <data name="Xəbərdarlıq" xml:space="preserve">
-    <value> Xəbərdarlıq</value>
+    <value>Xəbərdarlıq</value>
   </data>
-  <data name="YaddaSaxla" xml:space="preserve">
-    <value>Yadda Saxla</value>
+  <data name="YekunMəbləğ" xml:space="preserve">
+    <value>Yekun Məbləğ</value>
   </data>
   <data name="YeniMəhsul" xml:space="preserve">
     <value>Yeni Məhsul</value>
@@ -195,7 +249,34 @@
   <data name="ZəhmətOlmasaMəhsulSeçin" xml:space="preserve">
     <value>Zəhmət olmasa səbətə məhsul əlavə edin.</value>
   </data>
+  <data name="ÖdənişNövü" xml:space="preserve">
+    <value>Ödəniş Növü</value>
+  </data>
   <data name="ÜmumiYekun" xml:space="preserve">
     <value>ÜMUMİ YEKUN:</value>
+  </data>
+  <data name="İstifadəçiAdı" xml:space="preserve">
+    <value>İstifadəçi Adı</value>
+  </data>
+  <data name="İstifadəçiAdıMövcuddur" xml:space="preserve">
+    <value>Bu istifadəçi adı artıq mövcuddur. Fərqli bir ad seçin.</value>
+  </data>
+  <data name="İstifadəçiTapılmadı" xml:space="preserve">
+    <value>Bu e-poçt ünvanı ilə qeydiyyatdan keçmiş istifadəçi tapılmadı.</value>
+  </data>
+  <data name="Şifrə" xml:space="preserve">
+    <value>Şifrə</value>
+  </data>
+  <data name="ŞifrəBərpaFormBasliq" xml:space="preserve">
+    <value>Şifrənin Bərpası</value>
+  </data>
+  <data name="ŞifrələrEyniDeyil" xml:space="preserve">
+    <value>Şifrələr eyni deyil.</value>
+  </data>
+  <data name="ŞifrəmiUnutdum" xml:space="preserve">
+    <value>Şifrəmi unutdum</value>
+  </data>
+  <data name="ŞifrəTəkrar" xml:space="preserve">
+    <value>Şifrə Təkrar</value>
   </data>
 </root>

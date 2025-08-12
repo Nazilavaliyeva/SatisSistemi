@@ -61,6 +61,15 @@ namespace POS.SatisSistemi.IsMantigi.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Full Name.
+        /// </summary>
+        public static string AdSoyad {
+            get {
+                return ResourceManager.GetString("AdSoyad", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to POS - Point of Sale.
         /// </summary>
         public static string AnaFormBasliq {
@@ -70,7 +79,7 @@ namespace POS.SatisSistemi.IsMantigi.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Inventory.
+        ///   Looks up a localized string similar to  Inventory.
         /// </summary>
         public static string Anbar {
             get {
@@ -97,7 +106,7 @@ namespace POS.SatisSistemi.IsMantigi.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Search by Code/Barcode....
+        ///   Looks up a localized string similar to Search by SKU/Barcode....
         /// </summary>
         public static string Axtar {
             get {
@@ -106,11 +115,29 @@ namespace POS.SatisSistemi.IsMantigi.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Barcode.
+        ///   Looks up a localized string similar to  Barcode.
         /// </summary>
         public static string Barkod {
             get {
                 return ResourceManager.GetString("Barkod", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Recovery instructions have been sent to {0}..
+        /// </summary>
+        public static string BərpaMesajı {
+            get {
+                return ResourceManager.GetString("BərpaMesajı", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter the e-mail address you registered with. Recovery instructions will be sent to that address..
+        /// </summary>
+        public static string BərpaTəlimatı {
+            get {
+                return ResourceManager.GetString("BərpaTəlimatı", resourceCulture);
             }
         }
         
@@ -124,11 +151,65 @@ namespace POS.SatisSistemi.IsMantigi.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Add/Edit Product.
+        ///   Looks up a localized string similar to  E-mail.
         /// </summary>
-        public static string i {
+        public static string Email {
             get {
-                return ResourceManager.GetString("i", resourceCulture);
+                return ResourceManager.GetString("Email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to LOG IN.
+        /// </summary>
+        public static string GirişEt {
+            get {
+                return ResourceManager.GetString("GirişEt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Incorrect username or password!.
+        /// </summary>
+        public static string GirişXətası {
+            get {
+                return ResourceManager.GetString("GirişXətası", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  Send.
+        /// </summary>
+        public static string Göndər {
+            get {
+                return ResourceManager.GetString("Göndər", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Username.
+        /// </summary>
+        public static string İstifadəçiAdı {
+            get {
+                return ResourceManager.GetString("İstifadəçiAdı", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This username already exists. Please choose a different one..
+        /// </summary>
+        public static string İstifadəçiAdıMövcuddur {
+            get {
+                return ResourceManager.GetString("İstifadəçiAdıMövcuddur", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No user found registered with this e-mail address..
+        /// </summary>
+        public static string İstifadəçiTapılmadı {
+            get {
+                return ResourceManager.GetString("İstifadəçiTapılmadı", resourceCulture);
             }
         }
         
@@ -160,11 +241,29 @@ namespace POS.SatisSistemi.IsMantigi.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to System Login.
+        /// </summary>
+        public static string LoginFormBasliq {
+            get {
+                return ResourceManager.GetString("LoginFormBasliq", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to  Product Name.
         /// </summary>
         public static string MəhsulAdı {
             get {
                 return ResourceManager.GetString("MəhsulAdı", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add/Edit Product.
+        /// </summary>
+        public static string MəhsulRedakteFormBasliq {
+            get {
+                return ResourceManager.GetString("MəhsulRedakteFormBasliq", resourceCulture);
             }
         }
         
@@ -178,16 +277,7 @@ namespace POS.SatisSistemi.IsMantigi.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Loading data....
-        /// </summary>
-        public static string MəlumatlarYüklənir {
-            get {
-                return ResourceManager.GetString("MəlumatlarYüklənir", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Quantity.
+        ///   Looks up a localized string similar to Miqdar.
         /// </summary>
         public static string Miqdar {
             get {
@@ -205,7 +295,7 @@ namespace POS.SatisSistemi.IsMantigi.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cash.
+        ///   Looks up a localized string similar to  Cash.
         /// </summary>
         public static string Nəğd {
             get {
@@ -223,7 +313,43 @@ namespace POS.SatisSistemi.IsMantigi.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Price.
+        ///   Looks up a localized string similar to Payment Type.
+        /// </summary>
+        public static string ÖdənişNövü {
+            get {
+                return ResourceManager.GetString("ÖdənişNövü", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Register.
+        /// </summary>
+        public static string Qeydiyyat {
+            get {
+                return ResourceManager.GetString("Qeydiyyat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New User Registration.
+        /// </summary>
+        public static string QeydiyyatFormBasliq {
+            get {
+                return ResourceManager.GetString("QeydiyyatFormBasliq", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Registration completed successfully!.
+        /// </summary>
+        public static string QeydiyyatUğurlu {
+            get {
+                return ResourceManager.GetString("QeydiyyatUğurlu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  Price.
         /// </summary>
         public static string Qiymət {
             get {
@@ -232,11 +358,56 @@ namespace POS.SatisSistemi.IsMantigi.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Complete Sale.
+        ///   Looks up a localized string similar to Save.
         /// </summary>
-        public static string SatışıTamamla {
+        public static string Satış_Tarixçəsi {
             get {
-                return ResourceManager.GetString("SatışıTamamla", resourceCulture);
+                return ResourceManager.GetString("Satış Tarixçəsi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sales Transactions.
+        /// </summary>
+        public static string SatışƏməliyyatları {
+            get {
+                return ResourceManager.GetString("SatışƏməliyyatları", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sale ID.
+        /// </summary>
+        public static string SatışID {
+            get {
+                return ResourceManager.GetString("SatışID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sale Details.
+        /// </summary>
+        public static string SatışınTərkibi {
+            get {
+                return ResourceManager.GetString("SatışınTərkibi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sales History.
+        /// </summary>
+        public static string SatışTarixçəsi {
+            get {
+                return ResourceManager.GetString("SatışTarixçəsi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sales History.
+        /// </summary>
+        public static string SatışTarixçəsiFormBasliq {
+            get {
+                return ResourceManager.GetString("SatışTarixçəsiFormBasliq", resourceCulture);
             }
         }
         
@@ -250,11 +421,65 @@ namespace POS.SatisSistemi.IsMantigi.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Are you sure you want to delete?.
+        ///   Looks up a localized string similar to  Password.
+        /// </summary>
+        public static string Şifrə {
+            get {
+                return ResourceManager.GetString("Şifrə", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password Recovery.
+        /// </summary>
+        public static string ŞifrəBərpaFormBasliq {
+            get {
+                return ResourceManager.GetString("ŞifrəBərpaFormBasliq", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Passwords do not match..
+        /// </summary>
+        public static string ŞifrələrEyniDeyil {
+            get {
+                return ResourceManager.GetString("ŞifrələrEyniDeyil", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  Forgot password.
+        /// </summary>
+        public static string ŞifrəmiUnutdum {
+            get {
+                return ResourceManager.GetString("ŞifrəmiUnutdum", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Confirm Password.
+        /// </summary>
+        public static string ŞifrəTəkrar {
+            get {
+                return ResourceManager.GetString("ŞifrəTəkrar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  Are you sure you want to delete?.
         /// </summary>
         public static string SilməkİstədiyinizəƏminsiniz {
             get {
                 return ResourceManager.GetString("SilməkİstədiyinizəƏminsiniz", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date.
+        /// </summary>
+        public static string Tarix {
+            get {
+                return ResourceManager.GetString("Tarix", resourceCulture);
             }
         }
         
@@ -268,6 +493,24 @@ namespace POS.SatisSistemi.IsMantigi.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to  Unit Price.
+        /// </summary>
+        public static string VahidinQiyməti {
+            get {
+                return ResourceManager.GetString("VahidinQiyməti", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All fields must be filled..
+        /// </summary>
+        public static string XanalarıDoldurun {
+            get {
+                return ResourceManager.GetString("XanalarıDoldurun", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Warning.
         /// </summary>
         public static string Xəbərdarlıq {
@@ -277,11 +520,11 @@ namespace POS.SatisSistemi.IsMantigi.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Save.
+        ///   Looks up a localized string similar to Final Amount.
         /// </summary>
-        public static string YaddaSaxla {
+        public static string YekunMəbləğ {
             get {
-                return ResourceManager.GetString("YaddaSaxla", resourceCulture);
+                return ResourceManager.GetString("YekunMəbləğ", resourceCulture);
             }
         }
         

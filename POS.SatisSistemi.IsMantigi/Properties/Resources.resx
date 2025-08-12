@@ -117,11 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AdSoyad" xml:space="preserve">
+    <value>Full Name</value>
+  </data>
   <data name="AnaFormBasliq" xml:space="preserve">
     <value>POS - Point of Sale</value>
   </data>
   <data name="Anbar" xml:space="preserve">
-    <value>Inventory</value>
+    <value> Inventory</value>
   </data>
   <data name="AnbarFormBasliq" xml:space="preserve">
     <value>Inventory Management</value>
@@ -130,13 +133,31 @@
     <value>SKU</value>
   </data>
   <data name="Axtar" xml:space="preserve">
-    <value>Search by Code/Barcode...</value>
+    <value>Search by SKU/Barcode...</value>
   </data>
   <data name="Barkod" xml:space="preserve">
-    <value>Barcode</value>
+    <value> Barcode</value>
+  </data>
+  <data name="BərpaMesajı" xml:space="preserve">
+    <value>Recovery instructions have been sent to {0}.</value>
+  </data>
+  <data name="BərpaTəlimatı" xml:space="preserve">
+    <value>Enter the e-mail address you registered with. Recovery instructions will be sent to that address.</value>
   </data>
   <data name="Cəm" xml:space="preserve">
     <value> Total</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value> E-mail</value>
+  </data>
+  <data name="GirişEt" xml:space="preserve">
+    <value>LOG IN</value>
+  </data>
+  <data name="GirişXətası" xml:space="preserve">
+    <value>Incorrect username or password!</value>
+  </data>
+  <data name="Göndər" xml:space="preserve">
+    <value> Send</value>
   </data>
   <data name="Kartla" xml:space="preserve">
     <value>Card</value>
@@ -144,11 +165,14 @@
   <data name="Köçürmə" xml:space="preserve">
     <value>Transfer</value>
   </data>
+  <data name="LoginFormBasliq" xml:space="preserve">
+    <value>System Login</value>
+  </data>
   <data name="LəğvEt" xml:space="preserve">
     <value>Cancel</value>
   </data>
   <data name="Miqdar" xml:space="preserve">
-    <value>Quantity</value>
+    <value>Miqdar</value>
   </data>
   <data name="MövcudMiqdar" xml:space="preserve">
     <value>Stock Quantity</value>
@@ -156,38 +180,68 @@
   <data name="MəhsulAdı" xml:space="preserve">
     <value> Product Name</value>
   </data>
-  <data name="i" xml:space="preserve">
+  <data name="MəhsulRedakteFormBasliq" xml:space="preserve">
     <value>Add/Edit Product</value>
   </data>
   <data name="Məlumat" xml:space="preserve">
     <value>Information</value>
   </data>
-  <data name="MəlumatlarYüklənir" xml:space="preserve">
-    <value>Loading data...</value>
-  </data>
   <data name="Nisyə" xml:space="preserve">
     <value>Credit</value>
   </data>
   <data name="Nəğd" xml:space="preserve">
-    <value>Cash</value>
+    <value> Cash</value>
+  </data>
+  <data name="Qeydiyyat" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="QeydiyyatFormBasliq" xml:space="preserve">
+    <value>New User Registration</value>
+  </data>
+  <data name="QeydiyyatUğurlu" xml:space="preserve">
+    <value>Registration completed successfully!</value>
   </data>
   <data name="Qiymət" xml:space="preserve">
-    <value>Price</value>
+    <value> Price</value>
+  </data>
+  <data name="Satış Tarixçəsi" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="SatışID" xml:space="preserve">
+    <value>Sale ID</value>
+  </data>
+  <data name="SatışTarixçəsi" xml:space="preserve">
+    <value>Sales History</value>
+  </data>
+  <data name="SatışTarixçəsiFormBasliq" xml:space="preserve">
+    <value>Sales History</value>
   </data>
   <data name="SatışUğurluOldu" xml:space="preserve">
     <value>Sale completed successfully!</value>
   </data>
-  <data name="SatışıTamamla" xml:space="preserve">
-    <value>Complete Sale</value>
+  <data name="SatışınTərkibi" xml:space="preserve">
+    <value>Sale Details</value>
+  </data>
+  <data name="SatışƏməliyyatları" xml:space="preserve">
+    <value>Sales Transactions</value>
   </data>
   <data name="SilməkİstədiyinizəƏminsiniz" xml:space="preserve">
-    <value>Are you sure you want to delete?</value>
+    <value> Are you sure you want to delete?</value>
+  </data>
+  <data name="Tarix" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="VahidinQiyməti" xml:space="preserve">
+    <value> Unit Price</value>
+  </data>
+  <data name="XanalarıDoldurun" xml:space="preserve">
+    <value>All fields must be filled.</value>
   </data>
   <data name="Xəbərdarlıq" xml:space="preserve">
     <value>Warning</value>
   </data>
-  <data name="YaddaSaxla" xml:space="preserve">
-    <value>Save</value>
+  <data name="YekunMəbləğ" xml:space="preserve">
+    <value>Final Amount</value>
   </data>
   <data name="YeniMəhsul" xml:space="preserve">
     <value>New Product</value>
@@ -195,7 +249,34 @@
   <data name="ZəhmətOlmasaMəhsulSeçin" xml:space="preserve">
     <value>Please add products to the cart.</value>
   </data>
+  <data name="ÖdənişNövü" xml:space="preserve">
+    <value>Payment Type</value>
+  </data>
   <data name="ÜmumiYekun" xml:space="preserve">
     <value>GRAND TOTAL:</value>
+  </data>
+  <data name="İstifadəçiAdı" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="İstifadəçiAdıMövcuddur" xml:space="preserve">
+    <value>This username already exists. Please choose a different one.</value>
+  </data>
+  <data name="İstifadəçiTapılmadı" xml:space="preserve">
+    <value>No user found registered with this e-mail address.</value>
+  </data>
+  <data name="Şifrə" xml:space="preserve">
+    <value> Password</value>
+  </data>
+  <data name="ŞifrəBərpaFormBasliq" xml:space="preserve">
+    <value>Password Recovery</value>
+  </data>
+  <data name="ŞifrələrEyniDeyil" xml:space="preserve">
+    <value>Passwords do not match.</value>
+  </data>
+  <data name="ŞifrəmiUnutdum" xml:space="preserve">
+    <value> Forgot password</value>
+  </data>
+  <data name="ŞifrəTəkrar" xml:space="preserve">
+    <value>Confirm Password</value>
   </data>
 </root>
