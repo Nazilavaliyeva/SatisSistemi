@@ -15,7 +15,6 @@ namespace POS.SatisSistemi.Arayuz
         static void Main()
         {
             // Proqramın valyuta və tarix formatlarını Azərbaycan mədəniyyətinə uyğunlaşdırır.
-            // Bu, bütün "C2" formatlı məbləğlərin sonunda "₼" (Manat) işarəsini göstərəcək.
             var cultureInfo = new CultureInfo("az-Latn-AZ");
             Thread.CurrentThread.CurrentCulture = cultureInfo;
             Thread.CurrentThread.CurrentUICulture = cultureInfo;
@@ -24,7 +23,7 @@ namespace POS.SatisSistemi.Arayuz
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            // Lokalizasiya üçün mövcud kodunuz
+            // Mövcud lokalizasiya kodunuz
             LokalizasiyaManager.DiliDəyişdir("az");
 
             // Giriş formunu yarat və işə sal
@@ -36,7 +35,6 @@ namespace POS.SatisSistemi.Arayuz
                     // Giriş uğurlu olarsa, əsas formu işə sal
                     Application.Run(new AnaForm());
                 }
-                // Əgər giriş uğurlu olmazsa və ya pəncərə bağlanarsa, proqram sonlanır.
             }
         }
     }
