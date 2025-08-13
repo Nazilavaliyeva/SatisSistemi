@@ -1,5 +1,7 @@
 using POS.SatisSistemi.IsMantigi;
 using System;
+using System.Globalization; // Bunu əlavə edin
+using System.Threading;      // Bunu əlavə edin
 using System.Windows.Forms;
 
 namespace POS.SatisSistemi.Arayuz
@@ -9,11 +11,16 @@ namespace POS.SatisSistemi.Arayuz
         [STAThread]
         static void Main()
         {
+            // Valyuta və tarix formatlarını Azərbaycan mədəniyyətinə uyğunlaşdır
+            var cultureInfo = new CultureInfo("az-Latn-AZ");
+            Thread.CurrentThread.CurrentCulture = cultureInfo;
+            Thread.CurrentThread.CurrentUICulture = cultureInfo;
+
             // Standart Windows Forms tənzimləmələri
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            // Standart dili təyin et
+            // Lokalizasiya üçün mövcud kodunuz
             LokalizasiyaManager.DiliDəyişdir("az");
 
             // Giriş formunu yarat
