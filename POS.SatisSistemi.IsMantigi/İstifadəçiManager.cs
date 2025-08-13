@@ -15,6 +15,28 @@ namespace POS.SatisSistemi.IsMantigi
         public İstifadəçiManager()
         {
             _istifadəçiAmbari = new JsonVeriAmbari<İstifadəçi>("istifadeciler.json");
+            // YENİ: Başlanğıcda admin istifadəçisinin olub-olmadığını yoxlayır
+            AdminİstifadəçisiYarat();
+        }
+
+        // YENİ: Əgər heç bir istifadəçi yoxdursa, defolt admin yaradır
+        private void AdminİstifadəçisiYarat()
+        {
+            var istifadəçilər = _istifadəçiAmbari.HamısınıGetir();
+            if (!istifadəçilər.Any())
+            {
+                var admin = new İstifadəçi
+                {
+                    Id = 1,
+                    AdSoyad = "System Admin",
+                    İstifadəçiAdı = "admin",
+                    Email = "admin@pos.local",
+                    ŞifrəHash = ŞifrəniHashlə("admin123"), // Real layihədə daha mürəkkəb şifrə istifadə edin
+                    Rol = İstifadəçiRolu.Admin
+                };
+                istifadəçilər.Add(admin);
+                _istifadəçiAmbari.HamısınıYaz(istifadəçilər);
+            }
         }
 
         // Verilmiş şifrəni SHA256 alqoritmi ilə hash-ləyir
@@ -32,9 +54,12 @@ namespace POS.SatisSistemi.IsMantigi
         public bool QeydiyyatdanKeçir(İstifadəçi yeniİstifadəçi, string şifrə)
         {
             var istifadəçilər = _istifadəçiAmbari.HamısınıGetir();
-            if (istifadəçilər.Any(i => i.İstifadəçiAdı.ToLower() == yeniİstifadəçi.İstifadəçiAdı.ToLower()))
+
+            // DƏYİŞİKLİK: İstifadəçi adı VƏ ya e-poçtun mövcud olub-olmadığını yoxlayır
+            if (istifadəçilər.Any(i => i.İstifadəçiAdı.ToLower() == yeniİstifadəçi.İstifadəçiAdı.ToLower() ||
+                                     i.Email.ToLower() == yeniİstifadəçi.Email.ToLower()))
             {
-                return false;
+                return false; // İstifadəçi adı və ya email artıq mövcuddur
             }
 
             yeniİstifadəçi.Id = istifadəçilər.Any() ? istifadəçilər.Max(i => i.Id) + 1 : 1;
@@ -49,16 +74,12 @@ namespace POS.SatisSistemi.IsMantigi
         public İstifadəçi GirişEt(string istifadəçiAdı, string şifrə)
         {
             var istifadəçilər = _istifadəçiAmbari.HamısınıGetir();
-
-            // Dəyişənin adı düzgün yazıldı
             var daxilOlanİstifadəçi = istifadəçilər.FirstOrDefault(i => i.İstifadəçiAdı.ToLower() == istifadəçiAdı.ToLower());
 
             if (daxilOlanİstifadəçi != null)
             {
-                // Dəyişənin adı düzgün yazıldı
                 if (daxilOlanİstifadəçi.ŞifrəHash == ŞifrəniHashlə(şifrə))
                 {
-                    // Dəyişənin adı düzgün yazıldı
                     return daxilOlanİstifadəçi; // Giriş uğurludur
                 }
             }

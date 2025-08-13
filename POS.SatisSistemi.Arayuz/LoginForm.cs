@@ -1,4 +1,5 @@
 ﻿using POS.SatisSistemi.IsMantigi;
+using POS.SatisSistemi.Modeller; // YENİ
 using System;
 using System.Windows.Forms;
 
@@ -7,6 +8,7 @@ namespace POS.SatisSistemi.Arayuz
     public partial class LoginForm : Form
     {
         private readonly İstifadəçiManager _istifadəçiManager;
+        public İstifadəçi DaxilOlanİstifadəçi { get; private set; } // YENİ: Daxil olan istifadəçini saxlamaq üçün
 
         public LoginForm()
         {
@@ -19,13 +21,14 @@ namespace POS.SatisSistemi.Arayuz
             var istifadəçi = _istifadəçiManager.GirişEt(txtİstifadəçiAdı.Text, txtŞifrə.Text);
             if (istifadəçi != null)
             {
-                // Giriş uğurludur
+                // DƏYİŞİKLİK: Giriş uğurludur, istifadəçini saxla
+                DaxilOlanİstifadəçi = istifadəçi;
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
             else
             {
-                MessageBox.Show("İstifadəçi adı və ya şifrə yanlışdır!", "Xəta  0", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("İstifadəçi adı və ya şifrə yanlışdır!", "Xəta", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -8,34 +8,47 @@ using System.Windows.Forms;
 
 namespace POS.SatisSistemi.Arayuz
 {
-    // Əsas satış ekranı
     public partial class AnaForm : BazaForm
     {
         private readonly MəhsulManager _məhsulManager;
         private readonly SatışManager _satışManager;
+        private readonly İstifadəçi _cariİstifadəçi; // YENİ
         private List<SatışDetalı> _səbət = new List<SatışDetalı>();
 
-        public AnaForm()
+        // DƏYİŞİKLİK: Konstruktor artıq daxil olan istifadəçini qəbul edir
+        public AnaForm(İstifadəçi istifadəçi)
         {
             InitializeComponent();
             _məhsulManager = new MəhsulManager();
             _satışManager = new SatışManager();
+            _cariİstifadəçi = istifadəçi; // YENİ: Cari istifadəçini təyin et
+
             SəbətiHazırla();
             DiliTətbiqEt();
+            RolaGörəNəzarət(); // YENİ: İstifadəçi roluna görə interfeysi tənzimləyir
         }
 
-        // Formun yüklənməsi zamanı baş verən hadisə
+        // YENİ: İstifadəçinin roluna görə düymələri aktiv/deaktiv edir
+        private void RolaGörəNəzarət()
+        {
+            if (_cariİstifadəçi.Rol == İstifadəçiRolu.Kassir)
+            {
+                btnAnbar.Enabled = false;
+                btnAnbar.BackColor = System.Drawing.Color.LightGray;
+            }
+        }
+
         private void AnaForm_Load(object sender, EventArgs e)
         {
-            // Axtarış listbox-unu gizlədir
             lbAxtarışNəticələri.Visible = false;
         }
 
-        // Dil dəyişdirildikdə formadakı mətnləri yeniləyir
         protected override void DiliTətbiqEt()
         {
             this.Text = LokalizasiyaManager.GetirString("AnaFormBasliq");
             btnAnbar.Text = LokalizasiyaManager.GetirString("Anbar");
+            // YENİ: btnSatışTarixçəsi-nin mətni də lokallaşdırılır
+            btnSatışTarixçəsi.Text = LokalizasiyaManager.GetirString("SatışTarixçəsi");
             txtAxtarış.PlaceholderText = LokalizasiyaManager.GetirString("Axtar");
             lblÜmumiYekunBaşlıq.Text = LokalizasiyaManager.GetirString("ÜmumiYekun");
             btnNəğd.Text = LokalizasiyaManager.GetirString("Nəğd");
@@ -43,7 +56,6 @@ namespace POS.SatisSistemi.Arayuz
             btnKöçürmə.Text = LokalizasiyaManager.GetirString("Köçürmə");
             btnNisyə.Text = LokalizasiyaManager.GetirString("Nisyə");
 
-            // DataGridView başlıqlarını yeniləyir
             dgvSəbət.Columns["MəhsulAdı"].HeaderText = LokalizasiyaManager.GetirString("MəhsulAdı");
             dgvSəbət.Columns["Miqdar"].HeaderText = LokalizasiyaManager.GetirString("Miqdar");
             dgvSəbət.Columns["Qiymət"].HeaderText = LokalizasiyaManager.GetirString("Qiymət");
@@ -51,9 +63,6 @@ namespace POS.SatisSistemi.Arayuz
             dgvSəbət.Columns["SilSütunu"].HeaderText = "";
         }
 
-        #region Axtarış və Səbət Əməliyyatları
-
-        // Axtarış qutusuna mətn daxil edildikdə işə düşür
         private void txtAxtarış_TextChanged(object sender, EventArgs e)
         {
             string axtarışMətni = txtAxtarış.Text;
@@ -62,7 +71,6 @@ namespace POS.SatisSistemi.Arayuz
                 lbAxtarışNəticələri.Visible = false;
                 return;
             }
-
             var nəticələr = _məhsulManager.Axtar(axtarışMətni);
             lbAxtarışNəticələri.DataSource = nəticələr;
             lbAxtarışNəticələri.DisplayMember = "Ad";
@@ -70,7 +78,6 @@ namespace POS.SatisSistemi.Arayuz
             lbAxtarışNəticələri.Visible = nəticələr.Any();
         }
 
-        // Axtarış nəticələrindən bir məhsul seçildikdə işə düşür
         private void lbAxtarışNəticələri_DoubleClick(object sender, EventArgs e)
         {
             if (lbAxtarışNəticələri.SelectedItem is Məhsul seçilmişMəhsul)
@@ -82,19 +89,26 @@ namespace POS.SatisSistemi.Arayuz
             }
         }
 
-        // Məhsulu səbətə əlavə edir
+        // DƏYİŞİKLİK: Məhsulu səbətə əlavə edərkən anbar yoxlaması əlavə edildi
         private void MəhsuluSəbətəƏlavəEt(Məhsul məhsul, int miqdar = 1)
         {
+            var anbardakıMəhsul = _məhsulManager.IdGörəTap(məhsul.Id);
             var səbətdəkiMəhsul = _səbət.FirstOrDefault(m => m.MəhsulId == məhsul.Id);
+
+            int səbətdəkiCariMiqdar = səbətdəkiMəhsul?.Miqdar ?? 0;
+
+            if (anbardakıMəhsul.MövcudMiqdar < səbətdəkiCariMiqdar + miqdar)
+            {
+                MessageBox.Show($"Anbarda yalnız {anbardakıMəhsul.MövcudMiqdar} ədəd '{məhsul.Ad}' var.", "Anbar Nəzarəti", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             if (səbətdəkiMəhsul != null)
             {
-                // Məhsul artıq səbətdə varsa, miqdarını artır
                 səbətdəkiMəhsul.Miqdar += miqdar;
             }
             else
             {
-                // Yoxdursa, yeni detal kimi əlavə et
                 _səbət.Add(new SatışDetalı
                 {
                     MəhsulId = məhsul.Id,
@@ -106,8 +120,7 @@ namespace POS.SatisSistemi.Arayuz
             SəbətiYenilə();
         }
 
-        #endregion
-
+        // ... SəbətiHazırla, SəbətiYenilə, SəbətCəminiHesabla metodları olduğu kimi qalır ...
         #region DataGridView Əməliyyatları
 
         // Səbət cədvəlini (DataGridView) ilkin hazırlayır
@@ -176,20 +189,40 @@ namespace POS.SatisSistemi.Arayuz
             }
         }
 
-        // Miqdar xanası redaktə edildikdən sonra ümumi məbləği yeniləyir
+        // DƏYİŞİKLİK: Miqdar dəyişdirildikdə anbar yoxlaması
         private void dgvSəbət_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && e.ColumnIndex == dgvSəbət.Columns["Miqdar"].Index)
             {
+                var row = dgvSəbət.Rows[e.RowIndex];
+                var detal = row.DataBoundItem as SatışDetalı;
+                if (detal == null) return;
+
+                int yeniMiqdar;
+                if (!int.TryParse(row.Cells["Miqdar"].Value?.ToString(), out yeniMiqdar) || yeniMiqdar <= 0)
+                {
+                    MessageBox.Show("Düzgün miqdar daxil edin.", "Xəta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    row.Cells["Miqdar"].Value = detal.Miqdar; // Köhnə dəyəri geri qaytar
+                    return;
+                }
+
+                var anbardakıMəhsul = _məhsulManager.IdGörəTap(detal.MəhsulId);
+                if (anbardakıMəhsul.MövcudMiqdar < yeniMiqdar)
+                {
+                    MessageBox.Show($"Anbarda yalnız {anbardakıMəhsul.MövcudMiqdar} ədəd '{detal.MəhsulAdı}' var.", "Anbar Nəzarəti", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    row.Cells["Miqdar"].Value = detal.Miqdar; // Köhnə dəyəri geri qaytar
+                }
+                else
+                {
+                    detal.Miqdar = yeniMiqdar;
+                }
+
                 SəbətiYenilə();
             }
         }
 
         #endregion
 
-        #region Düymə Hadisələri
-
-        // Ödəniş düymələrindən birinə basıldıqda işə düşür
         private void btnÖdəniş_Click(object sender, EventArgs e)
         {
             if (!_səbət.Any())
@@ -197,28 +230,21 @@ namespace POS.SatisSistemi.Arayuz
                 MessageBox.Show(LokalizasiyaManager.GetirString("ZəhmətOlmasaMəhsulSeçin"), LokalizasiyaManager.GetirString("Xəbərdarlıq"), MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
             var düymə = sender as Button;
             ÖdənişMetodu metod = (ÖdənişMetodu)Enum.Parse(typeof(ÖdənişMetodu), düymə.Tag.ToString());
-
             var satış = new Satış
             {
                 SatılanMəhsullar = _səbət,
                 ÜmumiMəbləğ = _səbət.Sum(m => m.Miqdar * m.Qiymət),
                 ÖdənişMetodu = metod
             };
-
             _satışManager.SatışıTamamla(satış);
-
             MessageBox.Show(LokalizasiyaManager.GetirString("SatışUğurluOldu"), LokalizasiyaManager.GetirString("Məlumat"), MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            // Formu təmizlə
             _səbət.Clear();
             SəbətiYenilə();
             txtAxtarış.Clear();
         }
 
-        // Dil dəyişmə düymələri
         private void btnDil_Click(object sender, EventArgs e)
         {
             var düymə = sender as Button;
@@ -226,7 +252,6 @@ namespace POS.SatisSistemi.Arayuz
             DiliTətbiqEt();
         }
 
-        // Anbar formunu açır
         private void btnAnbar_Click(object sender, EventArgs e)
         {
             using (var anbarFormu = new AnbarForm())
@@ -235,8 +260,7 @@ namespace POS.SatisSistemi.Arayuz
             }
         }
 
-        #endregion
-        // Satış tarixçəsi formunu açır
+        // YENİ: Satış tarixçəsi düyməsinin funksionallığı
         private void btnSatışTarixçəsi_Click(object sender, EventArgs e)
         {
             using (var tarixçəFormu = new SatışTarixçəsiForm())

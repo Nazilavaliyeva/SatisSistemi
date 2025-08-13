@@ -1,39 +1,33 @@
 using POS.SatisSistemi.IsMantigi;
+using POS.SatisSistemi.Modeller; // YENİ
 using System;
-using System.Globalization; // Valyuta və mədəniyyət ayarları üçün əlavə edildi
-using System.Threading;      // Valyuta və mədəniyyət ayarları üçün əlavə edildi
+using System.Globalization;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace POS.SatisSistemi.Arayuz
 {
     internal static class Program
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
         [STAThread]
         static void Main()
         {
-            // Proqramın valyuta və tarix formatlarını Azərbaycan mədəniyyətinə uyğunlaşdırır.
             var cultureInfo = new CultureInfo("az-Latn-AZ");
             Thread.CurrentThread.CurrentCulture = cultureInfo;
             Thread.CurrentThread.CurrentUICulture = cultureInfo;
 
-            // Standart Windows Forms tənzimləmələri
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            // Mövcud lokalizasiya kodunuz
             LokalizasiyaManager.DiliDəyişdir("az");
 
-            // Giriş formunu yarat və işə sal
+            // DƏYİŞİKLİK: AnaForm-a istifadəçi ötürmək üçün bütün blok dəyişdirildi
             using (var loginForm = new LoginForm())
             {
-                // Giriş formunu göstər və nəticəni gözlə
                 if (loginForm.ShowDialog() == DialogResult.OK)
                 {
-                    // Giriş uğurlu olarsa, əsas formu işə sal
-                    Application.Run(new AnaForm());
+                    // Giriş uğurlu olarsa, daxil olan istifadəçini AnaForm-a ötür
+                    Application.Run(new AnaForm(loginForm.DaxilOlanİstifadəçi));
                 }
             }
         }
