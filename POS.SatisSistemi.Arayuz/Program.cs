@@ -1,17 +1,21 @@
 using POS.SatisSistemi.IsMantigi;
 using System;
-using System.Globalization; // Bunu əlavə edin
-using System.Threading;      // Bunu əlavə edin
+using System.Globalization; // Valyuta və mədəniyyət ayarları üçün əlavə edildi
+using System.Threading;      // Valyuta və mədəniyyət ayarları üçün əlavə edildi
 using System.Windows.Forms;
 
 namespace POS.SatisSistemi.Arayuz
 {
     internal static class Program
     {
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
         [STAThread]
         static void Main()
         {
-            // Valyuta və tarix formatlarını Azərbaycan mədəniyyətinə uyğunlaşdır
+            // Proqramın valyuta və tarix formatlarını Azərbaycan mədəniyyətinə uyğunlaşdırır.
+            // Bu, bütün "C2" formatlı məbləğlərin sonunda "₼" (Manat) işarəsini göstərəcək.
             var cultureInfo = new CultureInfo("az-Latn-AZ");
             Thread.CurrentThread.CurrentCulture = cultureInfo;
             Thread.CurrentThread.CurrentUICulture = cultureInfo;
@@ -23,7 +27,7 @@ namespace POS.SatisSistemi.Arayuz
             // Lokalizasiya üçün mövcud kodunuz
             LokalizasiyaManager.DiliDəyişdir("az");
 
-            // Giriş formunu yarat
+            // Giriş formunu yarat və işə sal
             using (var loginForm = new LoginForm())
             {
                 // Giriş formunu göstər və nəticəni gözlə
